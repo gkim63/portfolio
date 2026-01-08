@@ -246,3 +246,89 @@ body {
 #copy-msg.show {
   opacity: 1;
 }
+
+/* ----- 반응형 모바일 스타일 ----- */
+@media screen and (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr 1.5fr; /* 중간과 왼쪽 합치고 오른쪽 하나 */
+    grid-template-rows: auto;
+    gap: 16px;
+    padding: 30px 5%;
+    height: auto;
+  }
+
+  .about, .resume, .skills {
+    grid-column: 1 / span 2;
+    grid-row: auto;
+  }
+
+  .profile-main {
+    grid-column: 1 / span 2;
+    grid-row: auto;
+    text-align: center;
+  }
+
+  .p1, .p2, .p3 {
+    grid-column: 1 / span 2;
+    grid-row: auto;
+  }
+
+  .profile-img-wrapper img {
+    width: 60%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .contact-box {
+    width: 80%;
+  }
+
+  .social-icons {
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .main-name {
+    font-size: 2rem;
+  }
+
+  .item-title {
+    font-size: 1.1rem;
+  }
+
+  .item-desc {
+    font-size: 0.9rem;
+  }
+
+  .bento-link {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr; /* 한 줄로 쭉 */
+    padding: 20px 5%;
+  }
+
+  .profile-img-wrapper img {
+    width: 80%;
+  }
+
+  .contact-box {
+    width: 90%;
+  }
+
+  .social-icons {
+    gap: 15px;
+    font-size: 1rem;
+  }
+
+  .main-name {
+    font-size: 1.8rem;
+  }
+
+  .main-job {
+    font-size: 1rem;
+  }
+}
