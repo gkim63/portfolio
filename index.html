@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bento Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+<body>
+
+
+  <section class="bento-grid">
+    <div class="container">
+      
+      <div class="bento-grid__item about">
+        <h3 class="item-title">About Me</h3>
+        <p class="item-desc">I’m a Data Analyst with a passion for turning data into meaningful insights.
+        With experience in SQL, Python, and Excel, I enjoy building solutions that support better decision-making. </p>
+ 
+        
+      </div>
+      <div class="bento-grid__item resume">
+        <h3 class="item-title">Resume</h3>
+        <p class="item-desc">For a detailed view of my experience and skills, get my resume here.</p>
+        <a href="Gabin_Kim_Resume.pdf" download class="link-text bento-link">
+          Download Resume →
+        </a>
+      </div>
+      <div class="bento-grid__item skills">
+        <h3 class="item-title">Core Skills</h3>
+        <div class="skill-icons">
+          <div class="skill">
+            <img src="./assets/icons/python.png" alt="Python">
+            <span>Python</span>
+          </div>
+          <div class="skill">
+            <img src="./assets/icons/mysql.png" alt="SQL">
+            <span>SQL</span>
+          </div>
+          <div class="skill">
+            <img src="./assets/icons/excel.png" alt="Excel">
+            <span>Excel</span>
+          </div>
+          <div class="skill">
+            <img src="./assets/icons/powerbi.png" alt="Power BI">
+            <span>Power BI</span>
+          </div>
+        </div>
+        <p class="item-desc">Statistical Analysis / Data Visualization / Data cleaning & Modeling</p>
+      </div>
+
+      <div class="bento-grid__item profile-main">
+        <div class="profile-img-wrapper">
+          <img src="./assets/images/profile.jpg" alt="Profile" class="main-img">
+        </div>
+        <h1 class="main-name">Gabin Kim</h1>
+        <p class="main-job">Solution-Oriented Data Analyst | SQL · Python · Excel</p>
+        <div class="contact-box">
+          <div class="contact-title">Contact</div>
+
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/gabin-kim-kgb011010" target="_blank">Indeed</a>
+            <a href="https://github.com/gkim63" target="_blank">GitHub</a>
+            <a href="#" id="email-copy">E-mail</a>
+          </div>
+          <span id="copy-msg">Email copied to clipboard</span>
+
+        </div>
+
+      </div>
+
+      <div class="bento-grid__item project p1">
+        <h3 class="item-title">HR Analytics: Factors Affecting Employee Sleep Quality</p>
+        <p class="item-desc">HR analytics project analyzing occupational and lifestyle factors affecting sleep quality.</p>
+        <a href="https://github.com/gkim63/capstone_project_sleep_quality" target="_blank" class="link-text bento-link">
+          View Project →
+          </a>      
+      </div> 
+
+      <div class="bento-grid__item project p2">
+        <h3 class="item-title">Project 02</h3>
+        <p class="item-desc">데이터 분석 프로젝트 설명</p>
+        <span class="link-text bento-link">View Project →</span>
+      </div>
+
+      <div class="bento-grid__item project p3">
+        <h3 class="item-title">Project 03</h3>
+        <p class="item-desc">데이터 분석 프로젝트 설명</p>
+        <span class="link-text bento-link">View Project →</span>
+      </div>
+    </div>
+  </section>
+<script>
+  const emailBtn = document.getElementById('email-copy');
+  const msg = document.getElementById('copy-msg');
+  const email = 'ksy011010@gmail.com';
+
+  emailBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    navigator.clipboard.writeText(email).then(() => {
+      msg.classList.add('show');
+
+      setTimeout(() => {
+        msg.classList.remove('show');
+      }, 2000);
+    });
+  });
+</script>
+
+</body>
